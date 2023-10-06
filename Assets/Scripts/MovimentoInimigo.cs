@@ -41,4 +41,14 @@ public class MovimentoInimigo : MonoBehaviour
         Scale.x *= -1;
         transform.localScale = Scale;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("bala"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
 }
