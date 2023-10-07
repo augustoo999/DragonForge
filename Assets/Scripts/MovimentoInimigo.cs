@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MovimentoInimigo : MonoBehaviour
 {
+    public GameObject LaserInimigo;
+    public Transform LocalDisparo;
+    public float tempoMaximoEntreAsBolasDeFogo;
+    public float TempoAtualDasBolasDeFogo;
+    public bool inimigoAtirador;
     public float Speed;
     public bool Ground;
     public Transform groundCheck;
@@ -19,7 +24,7 @@ public class MovimentoInimigo : MonoBehaviour
     {
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
         Ground = Physics2D.Linecast(groundCheck.position, transform.position, groundLayer);
-        Debug.Log(Ground);
+        
 
         if (Ground == false)
         {
@@ -33,7 +38,13 @@ public class MovimentoInimigo : MonoBehaviour
         {
             Flip();
         }
+
+        if (inimigoAtirador == true)
+        {
+            AtirarBolaDeFogo();
+        }
     }
+
     void Flip()
     {
         FacingRight = !FacingRight;
@@ -50,5 +61,13 @@ public class MovimentoInimigo : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
+    private void AtirarBolaDeFogo()
+    {
+        TempoAtualDasBolasDeFogo -= Time.deltaTime;
+        if(TempoAtualDasBolasDeFogo <= 0)
+        {
+            Instantiate(LaserInimigo, LocalDisparo.position, Quaternion.Euler(0f, 0f, 90f));
+            TempoAtualDasBolasDeFogo = tempoMaximoEntreAsBolasDeFogo;
+        }
+    }
 }

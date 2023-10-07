@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
    
     public float forcaDoTiro;
    
-    private bool flipX = false;
+    private bool flipX = true;
 
     private Rigidbody2D rb;
 
@@ -53,11 +53,12 @@ public class Player : MonoBehaviour
 
         rb.velocity = velocidadeMovimento;
 
-        if (flipX == true && velocidade > 0)
+
+        if (flipX == false && movimentoHorizontal > 0)
         {
             Flip();
         }
-        else if (flipX == false && velocidade < 0)
+        if (flipX == true && movimentoHorizontal < 0)
         {
             Flip();
         }
@@ -75,7 +76,6 @@ public class Player : MonoBehaviour
         {
 
             rb.AddForce(Vector2.up * puloForca, ForceMode2D.Impulse);
-            Debug.Log("Jump");
         }
 
         tiro = Input.GetButtonDown("Fire1");
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         flipX = !flipX;
        float x = transform.localScale.x;
         x *= -1;
-        transform.localScale = new Vector3(x, transform.localScale.y, transform.localScale.z);
+        transform.localScale = new Vector3(transform.localScale.x*-1, transform.localScale.y, transform.localScale.z);
         forcaDoTiro *= -1;
     }
 
