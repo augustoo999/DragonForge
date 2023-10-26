@@ -6,15 +6,15 @@ public class GameController : MonoBehaviour
 {
     public string[] PlayerNames;
 
-    // Start is called before the first frame update
+    public ScriptableObject sc;
+
+    public GameObject ene;
+   
     void Start()
     {
-        
+        Instantiate(ene);
+        Debug.Log(sc.name);
+        //ene.GetComponent<MovimentoInimigo>().Speed = sc.movespeed;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

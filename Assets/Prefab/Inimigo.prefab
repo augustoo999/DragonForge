@@ -350,6 +350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d605d0a86cd46db4088fb8bbea08be76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LaserInimigo: {fileID: 0}
+  LocalDisparo: {fileID: 0}
+  tempoMaximoEntreAsBolasDeFogo: 0
+  TempoAtualDasBolasDeFogo: 0
+  inimigoAtirador: 0
   Speed: 4.14
   Ground: 1
   groundCheck: {fileID: 1038773965908423935}

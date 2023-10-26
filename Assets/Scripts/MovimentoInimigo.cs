@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MovimentoInimigo : MonoBehaviour
 {
     public GameObject LaserInimigo;
@@ -14,12 +15,8 @@ public class MovimentoInimigo : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public bool FacingRight = true;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
@@ -63,7 +60,9 @@ public class MovimentoInimigo : MonoBehaviour
     }
     private void AtirarBolaDeFogo()
     {
-        TempoAtualDasBolasDeFogo -= Time.deltaTime;
+        if(TempoAtualDasBolasDeFogo >= 0){
+            TempoAtualDasBolasDeFogo -= Time.deltaTime;
+        }
         if(TempoAtualDasBolasDeFogo <= 0)
         {
             Instantiate(LaserInimigo, LocalDisparo.position, Quaternion.Euler(0f, 0f, 90f));
