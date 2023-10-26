@@ -15,5 +15,3 @@ MonoBehaviour:
   name: Roberto
   vidas: 0
   movespeed: 0
-  enemy: {fileID: 0}
-  controladoranim: {fileID: 0}
