@@ -702,7 +702,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 181153599}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1418089732
 PrefabInstance:
@@ -1052,6 +1052,7 @@ MonoBehaviour:
   balaProjetil: {fileID: 6246363529049301446, guid: 10fc6d28f897dff42b0b65d0564b42b2, type: 3}
   arma: {fileID: 353953381}
   forcaDoTiro: 31.29
+  cooldownDuration: 1
 --- !u!1001 &1731662416
 PrefabInstance:
   m_ObjectHideFlags: 0

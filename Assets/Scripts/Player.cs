@@ -1,8 +1,10 @@
 using System.Collections;
 
-using System.Collections.Generic;
+using System.Collections;
 
 using UnityEngine;
+
+using UnityEngine.UI;
 
 
 
@@ -29,7 +31,9 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private float cooldownTimer = 0f;
 
+    public float cooldownDuration = 1f;
 
     void Start()
 
@@ -63,14 +67,6 @@ public class Player : MonoBehaviour
             Flip();
         }
 
-        // Verifica se o personagem está no chão 
-
-        //Collider2D thiago = Physics2D.OverlapCircle(transform.position, 0.0000001f);
-
-        //Debug.Log(thiago.gameObject.name);
-
-        // Pulo 
-
         if (estaNoChao && Input.GetKeyUp(KeyCode.Space))
 
         {
@@ -78,10 +74,14 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * puloForca, ForceMode2D.Impulse);
         }
 
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+
         tiro = Input.GetButtonDown("Fire1");
 
         Atirar();
-
     }
 
     void Flip()
@@ -116,9 +116,7 @@ public class Player : MonoBehaviour
             temp.transform.position = arma.position;
             temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
             Destroy(temp.gameObject, 3f);
+            cooldownTimer = cooldownDuration;
         }
     }
-
 }
-
-
