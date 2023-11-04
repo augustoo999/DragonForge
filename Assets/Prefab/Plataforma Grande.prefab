@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6831319869566575735}
   - component: {fileID: 6831319869566575734}
   - component: {fileID: 6831319869566575729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plataforma Grande
   m_TagString: Ground
   m_Icon: {fileID: 0}
