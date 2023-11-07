@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * puloForca, ForceMode2D.Impulse);
         }
 
-        if (cooldownTimer > 0)
+        if (cooldownTimer >= 0)
         {
             cooldownTimer -= Time.deltaTime;
         }
@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
 
     private void Atirar()
     {
-        if(tiro == true)
+        if(Input.GetButtonDown("Fire1") && cooldownTimer <= 0)
         {
             GameObject temp = Instantiate(balaProjetil);
             temp.transform.position = arma.position;
