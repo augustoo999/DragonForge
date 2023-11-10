@@ -15,7 +15,6 @@ public class MovimentoInimigo : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public bool FacingRight = true;
-    public int Health = 10;
 
 
     void Update()
@@ -51,26 +50,12 @@ public class MovimentoInimigo : MonoBehaviour
         transform.localScale = Scale;
     }
 
-    void CheckHealth()
-    {
-        if (Health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    void TakeDamage(int amount)
-    {
-        Health -= amount;
-        CheckHealth();
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("bala"))
         {
             Destroy(collision.gameObject);
-            TakeDamage(5);
+            Destroy(this.gameObject);
         }
     }
     private void AtirarBolaDeFogo()
