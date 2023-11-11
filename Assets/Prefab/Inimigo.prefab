@@ -195,3 +195,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   FacingRight: 1
+  Health: 10

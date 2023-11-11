@@ -15,13 +15,14 @@ public class MovimentoInimigo : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public bool FacingRight = true;
+    public int Health = 10;
 
 
     void Update()
     {
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
         Ground = Physics2D.Linecast(groundCheck.position, transform.position, groundLayer);
-        
+
 
         if (Ground == false)
         {
@@ -50,23 +51,40 @@ public class MovimentoInimigo : MonoBehaviour
         transform.localScale = Scale;
     }
 
+    void CheckHealth()
+    {
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void TakeDamage(int amount)
+    {
+        Health -= amount;
+        CheckHealth();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("bala"))
         {
             Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+            TakeDamage(5);
         }
     }
     private void AtirarBolaDeFogo()
     {
-        if(TempoAtualDasBolasDeFogo >= 0){
+        if (TempoAtualDasBolasDeFogo >= 0)
+        {
             TempoAtualDasBolasDeFogo -= Time.deltaTime;
         }
-        if(TempoAtualDasBolasDeFogo <= 0)
+        if (TempoAtualDasBolasDeFogo <= 0)
         {
             Instantiate(LaserInimigo, LocalDisparo.position, Quaternion.Euler(0f, 0f, 90f));
             TempoAtualDasBolasDeFogo = tempoMaximoEntreAsBolasDeFogo;
         }
     }
 }
+
+
