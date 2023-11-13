@@ -18,6 +18,15 @@ public class MovimentoInimigo : MonoBehaviour
     public int Health = 10;
 
 
+    void Start()
+    {
+        if (groundCheck == null)
+        {
+            Debug.Log(this);
+            Debug.Break();
+        }
+    }
+
     void Update()
     {
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
