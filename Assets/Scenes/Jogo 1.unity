@@ -360,7 +360,7 @@ MonoBehaviour:
   inimigoAtirador: 0
   Speed: 0
   Ground: 0
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 2140704626}
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -1938,6 +1938,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: -7.334, y: 11.535, z: 32.024}
+--- !u!4 &2140704626 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1038773965908423935, guid: 68b54de0cf52a214286019ff04e18618, type: 3}
+  m_PrefabInstance: {fileID: 1038773966481332575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1038773966481332575
 PrefabInstance:
   m_ObjectHideFlags: 0
