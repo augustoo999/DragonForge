@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1038773967413114399}
   - component: {fileID: 1038773967413114464}
   - component: {fileID: 1038773967413114465}
+  - component: {fileID: 6241829960634223535}
   m_Layer: 0
   m_Name: Inimigo
   m_TagString: Untagged
@@ -196,3 +197,23 @@ MonoBehaviour:
     m_Bits: 64
   FacingRight: 1
   Health: 10
+--- !u!95 &6241829960634223535
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038773967413114466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31fe19d4c6a352245a377b58cff4efa1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
