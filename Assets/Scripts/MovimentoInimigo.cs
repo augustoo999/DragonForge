@@ -16,7 +16,7 @@ public class MovimentoInimigo : MonoBehaviour
     public LayerMask groundLayer;
     public bool FacingRight = true;
     public int Health = 10;
-
+    Animator animator;
 
     void Start()
     {
@@ -25,6 +25,8 @@ public class MovimentoInimigo : MonoBehaviour
             Debug.Log(this);
             Debug.Break();
         }
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -64,9 +66,19 @@ public class MovimentoInimigo : MonoBehaviour
     {
         if (Health <= 0)
         {
-            Destroy(gameObject);
+            animator.SetBool("IsAlive", false);
+
+            StartCoroutine(DestroyEnemy());
         }
     }
+
+    public IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        Destroy(gameObject);
+    }
+
+
 
     void TakeDamage(int amount)
     {
