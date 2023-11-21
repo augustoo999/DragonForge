@@ -67,6 +67,7 @@ public class MovimentoInimigo : MonoBehaviour
         if (Health <= 0)
         {
             animator.SetBool("IsAlive", false);
+            Speed = 0;
 
             StartCoroutine(DestroyEnemy());
         }
