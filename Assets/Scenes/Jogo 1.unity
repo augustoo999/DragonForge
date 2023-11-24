@@ -1019,13 +1019,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9824fe85046b4e458439fe399ff81ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 9.06
+  velocidade: 15
   puloForca: 43
   balaProjetil: {fileID: 6246363529049301446, guid: 10fc6d28f897dff42b0b65d0564b42b2, type: 3}
   arma: {fileID: 353953381}
   forcaDoTiro: 31.29
   cooldownDuration: 1
   tempoMachado: 2
+  Hp: 8
 --- !u!1 &1786673927
 GameObject:
   m_ObjectHideFlags: 0

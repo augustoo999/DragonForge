@@ -92,7 +92,7 @@ public class MovimentoInimigo : MonoBehaviour
         if (collision.gameObject.CompareTag("bala"))
         {
             Destroy(collision.gameObject);
-            TakeDamage(5);
+            TakeDamage(2);
         }
     }
     private void AtirarBolaDeFogo()

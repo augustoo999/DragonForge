@@ -4,6 +4,9 @@ using UnityEngine;
 
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
+
+
 
 
 public class Player : MonoBehaviour
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour
 
     public float tempoMachado;
 
+    public int Hp = 8;
     void Start()
 
     {
@@ -125,8 +129,30 @@ public class Player : MonoBehaviour
 
     
 
-    public void TomeDano()
+    public void TomeDano(int amount)
     {
-        Debug.Log("ow");
+        Hp -= amount;
+        if (Hp <= 0)
+        {
+            //Trigger animação de morrer
+            ResetCena();
+        }
     }
+
+    public void ResetCena()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("BoladeFogo"))
+        {
+            Destroy(collision.gameObject);
+            TomeDano(2);
+        }
+        
+    }
+
 }

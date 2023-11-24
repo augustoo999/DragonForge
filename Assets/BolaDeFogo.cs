@@ -27,7 +27,7 @@ public class BolaDeFogo : MonoBehaviour
     {
         if(collision.TryGetComponent<Player>(out var pl))
         {
-            pl.TomeDano();
+            pl.TomeDano(2);
             Destroy(gameObject);
         }
     }
