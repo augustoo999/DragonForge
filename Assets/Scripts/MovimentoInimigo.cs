@@ -101,10 +101,14 @@ public class MovimentoInimigo : MonoBehaviour
         {
             TempoAtualDasBolasDeFogo -= Time.deltaTime;
         }
-        if (TempoAtualDasBolasDeFogo <= 0)
+        if (TempoAtualDasBolasDeFogo < 0)
         {
-            Instantiate(LaserInimigo, LocalDisparo.position, Quaternion.Euler(0f, 0f, 90f));
-            TempoAtualDasBolasDeFogo = tempoMaximoEntreAsBolasDeFogo;
+            RaycastHit2D Hit = Physics2D.Raycast(LocalDisparo.position, Vector2.right * (FacingRight ? 1 : -1), 6);
+            if (Hit.collider != null && Hit.collider.gameObject.CompareTag("Player"))
+            {
+                TempoAtualDasBolasDeFogo = tempoMaximoEntreAsBolasDeFogo;
+                Instantiate(LaserInimigo, LocalDisparo.position, Quaternion.LookRotation(Vector3.forward, Vector2.right * (FacingRight ? 1 : -1)));
+            }
         }
     }
 }

@@ -184,11 +184,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b54de0cf52a214286019ff04e18618, type: 3}
---- !u!4 &181153599 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1038773967413114397, guid: 68b54de0cf52a214286019ff04e18618, type: 3}
-  m_PrefabInstance: {fileID: 1038773966481332575}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &300744168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -295,6 +290,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
@@ -673,37 +669,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.93
   Player: {fileID: 1565578332}
---- !u!1 &527994650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 527994651}
-  m_Layer: 0
-  m_Name: 'Local Disparo '
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &527994651
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527994650}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.411001, y: -2.1549997, z: 0}
-  m_LocalScale: {x: 3.1500006, y: 2.3283472, z: 2.3283472}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 181153599}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1418089732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -859,11 +824,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6284020156453825206, guid: 2a95a014191a2da478174d6ebc26e96f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53
+      value: -57.4
       objectReference: {fileID: 0}
     - target: {fileID: 6284020156453825206, guid: 2a95a014191a2da478174d6ebc26e96f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.1
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6284020156453825206, guid: 2a95a014191a2da478174d6ebc26e96f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -914,7 +879,7 @@ GameObject:
   - component: {fileID: 1565578333}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,6 +1246,7 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
@@ -1530,10 +1496,6 @@ PrefabInstance:
     - target: {fileID: 1038773967413114397, guid: 68b54de0cf52a214286019ff04e18618, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1038773967413114465, guid: 68b54de0cf52a214286019ff04e18618, type: 3}
-      propertyPath: sc
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1038773967413114466, guid: 68b54de0cf52a214286019ff04e18618, type: 3}
       propertyPath: m_Name

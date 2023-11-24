@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 
     public float cooldownDuration = 1f;
 
+    public float tempoMachado;
+
     void Start()
 
     {
@@ -115,6 +117,16 @@ public class Player : MonoBehaviour
             temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
             Destroy(temp.gameObject, 3f);
             cooldownTimer = cooldownDuration;
+            tempoMachado -= Time.deltaTime;
+            if (tempoMachado < 0)
+                Destroy(gameObject);
         }
+    }
+
+    
+
+    public void TomeDano()
+    {
+        Debug.Log("ow");
     }
 }

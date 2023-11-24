@@ -217,6 +217,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &274597041 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8284762411841360415, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
+  m_PrefabInstance: {fileID: 601954257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &328118695
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Conjunto 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8976541501974408037, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
+      propertyPath: LocalDisparo
+      value: 
+      objectReference: {fileID: 274597041}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
 --- !u!1001 &755888003
@@ -877,7 +886,7 @@ GameObject:
   - component: {fileID: 1565578333}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1016,6 +1025,7 @@ MonoBehaviour:
   arma: {fileID: 353953381}
   forcaDoTiro: 31.29
   cooldownDuration: 1
+  tempoMachado: 2
 --- !u!1 &1786673927
 GameObject:
   m_ObjectHideFlags: 0
