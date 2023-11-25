@@ -103,7 +103,7 @@ public class MovimentoInimigo : MonoBehaviour
         }
         if (TempoAtualDasBolasDeFogo < 0)
         {
-            RaycastHit2D Hit = Physics2D.Raycast(LocalDisparo.position, Vector2.right * (FacingRight ? 1 : -1), 6);
+            RaycastHit2D Hit = Physics2D.Raycast(LocalDisparo.position, Vector2.right * (FacingRight ? 1 : -1), 15);
             if (Hit.collider != null && Hit.collider.gameObject.CompareTag("Player"))
             {
                 TempoAtualDasBolasDeFogo = tempoMaximoEntreAsBolasDeFogo;

@@ -39,10 +39,16 @@ public class Player : MonoBehaviour
     public float tempoMachado;
 
     public int Hp = 8;
+
+    Animator animPlayer;
+
+
+
+
     void Start()
 
     {
-
+        animPlayer = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -60,6 +66,9 @@ public class Player : MonoBehaviour
         Vector2 velocidadeMovimento = new Vector2(movimentoHorizontal * velocidade, rb.velocity.y);
 
         rb.velocity = velocidadeMovimento;
+
+        animPlayer.SetFloat("velocidadeMovimento",Mathf.Abs (movimentoHorizontal));
+        animPlayer.SetBool("Pulo", !estaNoChao);
 
 
         if (flipX == false && movimentoHorizontal > 0)
