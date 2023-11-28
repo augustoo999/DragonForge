@@ -15,7 +15,7 @@ public class MovimentoInimigo : MonoBehaviour
     public Transform groundCheck;
     public LayerMask groundLayer;
     public bool FacingRight = true;
-    public int Health = 10;
+    public int Health = 5;
     Animator animator;
 
     void Start()
@@ -92,7 +92,7 @@ public class MovimentoInimigo : MonoBehaviour
         if (collision.gameObject.CompareTag("bala"))
         {
             Destroy(collision.gameObject);
-            TakeDamage(2);
+            TakeDamage(4);
         }
     }
     private void AtirarBolaDeFogo()

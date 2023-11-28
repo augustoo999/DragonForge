@@ -222,14 +222,14 @@ MonoBehaviour:
   tempoMaximoEntreAsBolasDeFogo: 2
   TempoAtualDasBolasDeFogo: 0
   inimigoAtirador: 1
-  Speed: 4.14
+  Speed: 6
   Ground: 1
   groundCheck: {fileID: 1038773965908423935}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   FacingRight: 1
-  Health: 10
+  Health: 8
 --- !u!95 &6241829960634223535
 Animator:
   serializedVersion: 5
