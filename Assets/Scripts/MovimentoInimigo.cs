@@ -84,6 +84,7 @@ public class MovimentoInimigo : MonoBehaviour
     void TakeDamage(int amount)
     {
         Health -= amount;
+        animator.SetTrigger("TakeDamage");
         CheckHealth();
     }
 
