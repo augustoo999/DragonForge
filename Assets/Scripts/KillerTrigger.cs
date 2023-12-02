@@ -11,7 +11,7 @@ public class KillerTrigger : MonoBehaviour
     {
         if (collision.TryGetComponent<Player>(out var player))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
     }
 }
