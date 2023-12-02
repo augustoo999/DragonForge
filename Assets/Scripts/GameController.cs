@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
+    [SerializeField] private string LevelName;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Player>(out var player))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(LevelName);
         }
     }
 }
+
+        

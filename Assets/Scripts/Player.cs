@@ -134,6 +134,10 @@ public class Player : MonoBehaviour
             if (tempoMachado < 0)
                 Destroy(gameObject);
         }
+        if (balaProjetil.gameObject.CompareTag("Ground"))
+        {
+            Destroy(balaProjetil.gameObject);
+        }
     }
 
     
