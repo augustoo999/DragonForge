@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 
 
 
-
 public class Player : MonoBehaviour
 
 {
@@ -42,7 +41,12 @@ public class Player : MonoBehaviour
 
     Animator animPlayer;
 
+    private AudioSource Sound;
 
+    private void Awake()
+    {
+        Sound = GetComponent<AudioSource>();
+    }
 
 
     void Start()
@@ -85,6 +89,7 @@ public class Player : MonoBehaviour
         {
 
             rb.AddForce(Vector2.up * puloForca, ForceMode2D.Impulse);
+            Sound.Play();
         }
 
         if (cooldownTimer >= 0)
