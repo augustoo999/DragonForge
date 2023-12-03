@@ -128,7 +128,7 @@ public class Player : MonoBehaviour
 
     private void Atirar()
     {
-        if(Input.GetButtonDown("Fire1") && cooldownTimer <= 0)
+        if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0)
         {
             GameObject temp = Instantiate(balaProjetil);
             temp.transform.position = arma.position;
@@ -136,16 +136,24 @@ public class Player : MonoBehaviour
             Destroy(temp.gameObject, 3f);
             cooldownTimer = cooldownDuration;
             tempoMachado -= Time.deltaTime;
+
+            // Verificar se a bala colidiu com o chão (Ground)
+            Collider2D[] hitColliders = Physics2D.OverlapCircleAll(temp.transform.position, 0.2f);
+            foreach (Collider2D hitCollider in hitColliders)
+            {
+                if (hitCollider.CompareTag("Ground"))
+                {
+                    // Destruir a bala se colidir com o chão
+                    Destroy(temp.gameObject);
+                    break;
+                }
+            }
+
             if (tempoMachado < 0)
                 Destroy(gameObject);
         }
-        if (balaProjetil.gameObject.CompareTag("Ground"))
-        {
-            Destroy(balaProjetil.gameObject);
-        }
     }
 
-    
 
     public void TomeDano(int amount)
     {
