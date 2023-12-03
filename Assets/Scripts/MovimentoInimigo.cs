@@ -16,7 +16,9 @@ public class MovimentoInimigo : MonoBehaviour
     public LayerMask groundLayer;
     public bool FacingRight = true;
     public int Health = 5;
+    private bool isTakingDamage = false;
     Animator animator;
+
 
     void Start()
     {
@@ -54,6 +56,27 @@ public class MovimentoInimigo : MonoBehaviour
         }
     }
 
+
+    void TakeDamage(int amount)
+    {
+        if (!isTakingDamage)
+        {
+            Health -= amount;
+            isTakingDamage = true;
+            animator.SetTrigger("TakeDamage");
+            StartCoroutine(ResetTakingDamageFlag());
+            CheckHealth();
+        }
+    }
+
+
+    IEnumerator ResetTakingDamageFlag()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        isTakingDamage = false;
+    }
+
+
     void Flip()
     {
         FacingRight = !FacingRight;
@@ -68,10 +91,11 @@ public class MovimentoInimigo : MonoBehaviour
         {
             animator.SetBool("IsAlive", false);
             Speed = 0;
-
             StartCoroutine(DestroyEnemy());
         }
     }
+
+    
 
     public IEnumerator DestroyEnemy()
     {
@@ -81,14 +105,6 @@ public class MovimentoInimigo : MonoBehaviour
 
 
 
-    void TakeDamage(int amount)
-    {
-        Health -= amount;
-        animator.SetTrigger("TakeDamage");
-        CheckHealth();
-    }
-
-   
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -98,6 +114,7 @@ public class MovimentoInimigo : MonoBehaviour
             TakeDamage(4);
         }
     }
+
     private void AtirarBolaDeFogo()
     {
         if (TempoAtualDasBolasDeFogo >= 0)

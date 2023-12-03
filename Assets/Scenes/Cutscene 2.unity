@@ -298,10 +298,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterImage: {fileID: 2106532753}
   characterSpeech: {fileID: 2134649304}
-  nextScene: Jogo 2
-  cutsceneText: "Ele est\xE1 aqui me provocando, vou entrar nesse vulc\xE3o e salvar
-    minha amada Celeste!!"
-  cutsceneDuration: 3
+  nextScene: Jogo 3
+  cutsceneText: "Voc\xEA n\xE3o sabe de nada Timber, Celeste me amaVoc\xEA n\xE3o
+    sabe de nada Timber, Celeste me ama, ela est\xE1 com algu\xE9m que mere\xE7a
+    ela de verdade!"
+  cutsceneDuration: 15
 --- !u!4 &1470950865
 Transform:
   m_ObjectHideFlags: 0
@@ -577,7 +578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e3e5e1d9124b1343bd4b7f5c9702e47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 914a3e5ea1ae8434ebf16e4cefcb394b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -612,8 +613,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -732, y: 166}
-  m_SizeDelta: {x: 667.6632, y: 526.6633}
+  m_AnchoredPosition: {x: -739, y: 254}
+  m_SizeDelta: {x: 516.6561, y: 407.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2134649303
 GameObject:
@@ -666,8 +667,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ele est\xE1 aqui me provocando, vou entrar nesse vulc\xE3o e salvar minha
-    amada Celeste!!"
+  m_Text: 
 --- !u!222 &2134649305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -693,6 +693,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177, y: 166}
+  m_AnchoredPosition: {x: 185, y: 188}
   m_SizeDelta: {x: 1475.9, y: 210.794}
   m_Pivot: {x: 0.5, y: 0.5}

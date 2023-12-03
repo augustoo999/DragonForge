@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +8,10 @@ public class CutsceneController : MonoBehaviour
     public Image characterImage;
     public Text characterSpeech;
     public string nextScene;
+
+    [Header("Cutscene Settings")]
+    public string cutsceneText;
+    public float cutsceneDuration = 3f;
 
     private void Start()
     {
@@ -19,17 +23,19 @@ public class CutsceneController : MonoBehaviour
     {
         // Mostrar a imagem e fala
         characterImage.gameObject.SetActive(true);
-        characterSpeech.text = "Ele está aqui me provocando, vou entrar nesse vulcão e salvar minha amada Celeste!!";
+        characterSpeech.text = cutsceneText;
 
-        // Aguarde alguns segundos (tempo suficiente para o jogador ler a fala)
-        yield return new WaitForSeconds(3f);
+        // Aguarde o tempo configurado (tempo suficiente para o jogador ler a fala)
+        yield return new WaitForSeconds(cutsceneDuration);
 
         // Ocultar a imagem e fala
         characterImage.gameObject.SetActive(false);
         characterSpeech.text = "";
 
-        // Trocar para a próxima cena
-        SceneManager.LoadScene(3);
+        // Trocar para a próxima cena, se fornecida
+        if (!string.IsNullOrEmpty(nextScene))
+        {
+            SceneManager.LoadScene(nextScene);
+        }
     }
 }
-

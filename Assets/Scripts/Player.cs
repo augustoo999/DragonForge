@@ -167,7 +167,7 @@ public class Player : MonoBehaviour
 
     public void ResetCena()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
 
