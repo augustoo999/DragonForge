@@ -130,6 +130,8 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0)
         {
+            animPlayer.SetTrigger("Atirar");
+
             GameObject temp = Instantiate(balaProjetil);
             temp.transform.position = arma.position;
             temp.GetComponent<Rigidbody2D>().velocity = new Vector2(forcaDoTiro, 0);
@@ -151,8 +153,11 @@ public class Player : MonoBehaviour
 
             if (tempoMachado < 0)
                 Destroy(gameObject);
+
+            
         }
     }
+
 
 
     public void TomeDano(int amount)
