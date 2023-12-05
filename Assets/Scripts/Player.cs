@@ -95,6 +95,10 @@ public class Player : MonoBehaviour
         if (cooldownTimer >= 0)
         {
             cooldownTimer -= Time.deltaTime;
+            if (cooldownTimer <= 0)
+            {
+                animPlayer.SetBool("Atirar", false);
+            }
         }
 
         tiro = Input.GetButtonDown("Fire1");
@@ -130,7 +134,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0)
         {
-            animPlayer.SetTrigger("Atirar");
+            animPlayer.SetBool("Atirar", true);
 
             GameObject temp = Instantiate(balaProjetil);
             temp.transform.position = arma.position;
@@ -154,6 +158,10 @@ public class Player : MonoBehaviour
             if (tempoMachado < 0)
                 Destroy(gameObject);
 
+            
+        }
+        else
+        {
             
         }
     }
@@ -181,6 +189,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("BoladeFogo"))
         {
             Destroy(collision.gameObject);
+            
             TomeDano(2);
         }
         

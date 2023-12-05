@@ -63,9 +63,13 @@ public class MovimentoInimigo : MonoBehaviour
         {
             Health -= amount;
             isTakingDamage = true;
-            animator.SetTrigger("TakeDamage");
+            animator.SetBool("TakeDamage", true);
             StartCoroutine(ResetTakingDamageFlag());
             CheckHealth();
+        }
+        else
+        {
+            animator.SetBool("TakeDamage", false);
         }
     }
 

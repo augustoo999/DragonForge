@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 210007570}
   - component: {fileID: 210007569}
   - component: {fileID: 210007571}
+  - component: {fileID: 210007572}
   m_Layer: 0
   m_Name: "Drag\xE3o"
   m_TagString: Untagged
@@ -367,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210007568}
   m_LocalRotation: {x: 0.006195898, y: 0, z: 0, w: 0.9999808}
-  m_LocalPosition: {x: 566.9, y: 466.5, z: -0.1}
+  m_LocalPosition: {x: 567, y: 467.27, z: -0.09}
   m_LocalScale: {x: 5.8238297, y: 6.178324, z: 2.5321}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -400,6 +401,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4, y: 1.6}
   m_EdgeRadius: 0
+--- !u!95 &210007572
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210007568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf7a71410b851b04fa737f5af3c933dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &274597041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8284762411841360415, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
@@ -1177,7 +1198,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3160628, y: 1.4382083}
+  m_Size: {x: 1.29, y: 1.43}
   m_EdgeRadius: 0
 --- !u!50 &1565578330
 Rigidbody2D:
@@ -1260,7 +1281,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565578328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.75, y: -16.29, z: 0}
+  m_LocalPosition: {x: 491.97, y: 457.15, z: 0}
   m_LocalScale: {x: 3.0580454, y: 2.7485883, z: 2.3667}
   m_ConstrainProportionsScale: 0
   m_Children:
