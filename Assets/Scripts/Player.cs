@@ -39,12 +39,17 @@ public class Player : MonoBehaviour
 
     public int Hp = 8;
 
+    public Transform Blaze;
+    DialogueSystem dialogueSystem;
+
     Animator animPlayer;
 
     private AudioSource Sound;
 
     private void Awake()
     {
+        dialogueSystem = FindObjectOfType<DialogueSystem>();
+
         Sound = GetComponent<AudioSource>();
     }
 
@@ -91,6 +96,19 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * puloForca, ForceMode2D.Impulse);
             Sound.Play();
         }
+
+
+
+        if (Mathf.Abs(transform.position.x - Blaze.position.x) < 2.0f)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                dialogueSystem.Next();
+            }
+        }
+
+
+
 
         if (cooldownTimer >= 0)
         {
@@ -183,7 +201,7 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("BoladeFogo"))
