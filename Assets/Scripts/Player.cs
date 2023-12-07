@@ -99,8 +99,8 @@ public class Player : MonoBehaviour
         }
 
 
-
-        if (Mathf.Abs(transform.position.x - Blaze.position.x) < 2.0f)
+        Debug.Log(Mathf.Abs(transform.position.x - Blaze.position.x));
+        if (Mathf.Abs(transform.position.x - Blaze.position.x) < 10f)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -140,6 +140,7 @@ public class Player : MonoBehaviour
         {
             estaNoChao = true;
         }
+        
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -187,6 +188,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    
 
 
     public void TomeDano(int amount)

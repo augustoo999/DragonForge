@@ -11,6 +11,7 @@ public class MenuPrincipalManager : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene(nomeDoLevelDeJogo);
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame

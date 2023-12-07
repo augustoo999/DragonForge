@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2912983336605834914}
   - component: {fileID: 2118415045324967654}
   - component: {fileID: 618121071703431492}
+  - component: {fileID: 8002195877819214561}
   m_Layer: 6
   m_Name: 'Plataforma Extra grande 2 '
   m_TagString: Ground
@@ -111,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.7, y: 2.22}
   m_EdgeRadius: 0
+--- !u!114 &8002195877819214561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6691833007442826444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd66a63884203d47bffbfb7b994cbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -3,27 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
-   
 {
-    [SerializeField] private float speed;
-    private float currentPosx;
-    private Vector3 velocity = Vector3.zero;
+    public Transform player;  // Atribua o transform do jogador aqui.
 
-    //follow player
-    [SerializeField] private Transform Player;
-    private void Update()
+    private void FixedUpdate()
     {
-        //transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPosx, transform.position.y, transform.position.z),
-        //    ref velocity, speed * Time.deltaTime);
-
-        transform.position = new Vector3(Player.position.x, transform.position.y, transform.position.z);
+        transform.position = Vector2.Lerp(transform.position, player.position, 0.1f);
     }
-    public void MoveToNewRoom(Transform  _newRoom)
-    {
-        currentPosx = _newRoom.position.x;
-    }
-   
-
-
-
 }
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fa4e46312a8f74182f94cbef06e9ef, type: 3}
+  m_Name: DialogueData 2
+  m_EditorClassIdentifier: 
+  talkScript:
+  - name: Timber
+    text: "Finalmente, encontrei voc\xEA, criatura das sombras! Onde est\xE1 minha
+      esposa?\r\n"
+  - name: Blaze
+    text: "(rugindo) Humano insolente, ousando desafiar um drag\xE3o em seu pr\xF3prio
+      dom\xEDnio. Sua esposa est\xE1 segura... por enquanto.\r\n"
+  - name: Timber
+    text: "N\xE3o vou tolerar amea\xE7as! Liberte-a imediatamente, ou eu farei voc\xEA
+      pagar!\r\n"
+  - name: Blaze
+    text: "(risada gutural) Voc\xEA \xE9 corajoso, mas sua coragem o levar\xE1 \xE0
+      sua ru\xEDna. Sua esposa est\xE1 aqui porque eu a escolhi. Apenas um tolo se
+      op\xF5e a um destino predeterminado.\r\n"
+  - name: Timber
+    text: "N\xE3o acredito em destinos. A \xFAnica coisa predeterminada aqui \xE9
+      o seu fim, criatura mal\xE9vola. Prepare-se para enfrentar a f\xFAria de um
+      homem determinado!\r\n"
+  - name: Blaze
+    text: "(sorrindo com desd\xE9m) Voc\xEA \xE9 mais corajoso do que eu imaginava,
+      humano. Sua esposa est\xE1 al\xE9m daquela passagem, no cora\xE7\xE3o do vulc\xE3o.
+      Mas, antes de ir, saiba que ela veio voluntariamente. Ela queria escapar da
+      monotonia da sua vida.\r\n"
+  - name: Timber
+    text: "(incr\xE9dulo) O qu\xEA?\r\n"
+  - name: Blaze
+    text: "(voando para o alto) E agora, vejo que n\xE3o sou mais necess\xE1rio aqui.
+      Adeus, humano. Que meus filhos consumam seus medos e desesperos!\r\n"

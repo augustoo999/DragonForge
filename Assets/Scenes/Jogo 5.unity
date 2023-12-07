@@ -537,6 +537,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1056307958912907089, guid: e07ca069bf05d684c8bd21dc876b8796, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 000f7ad1a0ce23c4890810efbbbd64bf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e07ca069bf05d684c8bd21dc876b8796, type: 3}
 --- !u!1 &353953380
@@ -800,6 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.93
+  MeuJogador: {fileID: 0}
   Player: {fileID: 1565578332}
 --- !u!114 &519420034
 MonoBehaviour:
@@ -1033,6 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a93cbf8be810654ab9ebf31fd2f8ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CenaAtual: 
 --- !u!1001 &1395717332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,6 +1312,9 @@ MonoBehaviour:
   cooldownDuration: 0.6
   tempoMachado: 0.5
   Hp: 46
+  Blaze: {fileID: 0}
+  audioS: {fileID: 0}
+  Sounds: []
 --- !u!95 &1565578334
 Animator:
   serializedVersion: 5
