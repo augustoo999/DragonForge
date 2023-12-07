@@ -18,6 +18,8 @@ public class MovimentoInimigo : MonoBehaviour
     public int Health = 5;
     private bool isTakingDamage = false;
     Animator animator;
+    public AudioSource audioEnemy;
+    public AudioClip[] SoundsEnemy;
 
 
     void Start()
@@ -93,8 +95,11 @@ public class MovimentoInimigo : MonoBehaviour
     {
         if (Health <= 0)
         {
+            audioEnemy.clip = SoundsEnemy[1];
+            audioEnemy.Play();
             animator.SetBool("IsAlive", false);
             Speed = 0;
+            
             StartCoroutine(DestroyEnemy());
         }
     }
@@ -116,6 +121,8 @@ public class MovimentoInimigo : MonoBehaviour
         {
             Destroy(collision.gameObject);
             TakeDamage(4);
+            audioEnemy.clip = SoundsEnemy[2];
+            audioEnemy.Play();
         }
     }
 
@@ -132,6 +139,8 @@ public class MovimentoInimigo : MonoBehaviour
             {
                 TempoAtualDasBolasDeFogo = tempoMaximoEntreAsBolasDeFogo;
                 Instantiate(LaserInimigo, LocalDisparo.position, Quaternion.LookRotation(Vector3.forward, Vector2.right * (FacingRight ? 1 : -1)));
+                audioEnemy.clip = SoundsEnemy[0];
+                audioEnemy.Play();
             }
         }
     }

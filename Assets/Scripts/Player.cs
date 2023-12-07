@@ -44,13 +44,13 @@ public class Player : MonoBehaviour
 
     Animator animPlayer;
 
-    private AudioSource Sound;
+    public AudioSource audioS;
+    public AudioClip[] Sounds;
 
     private void Awake()
     {
         dialogueSystem = FindObjectOfType<DialogueSystem>();
 
-        Sound = GetComponent<AudioSource>();
     }
 
 
@@ -94,7 +94,8 @@ public class Player : MonoBehaviour
         {
 
             rb.AddForce(Vector2.up * puloForca, ForceMode2D.Impulse);
-            Sound.Play();
+            audioS.clip = Sounds[0];
+            audioS.Play();
         }
 
 
@@ -153,6 +154,8 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && cooldownTimer <= 0)
         {
             animPlayer.SetBool("Atirar", true);
+            audioS.clip = Sounds[2];
+            audioS.Play();
 
             GameObject temp = Instantiate(balaProjetil);
             temp.transform.position = arma.position;
@@ -191,6 +194,7 @@ public class Player : MonoBehaviour
         Hp -= amount;
         if (Hp <= 0)
         {
+            
             //Trigger animação de morrer
             ResetCena();
         }
@@ -207,7 +211,9 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("BoladeFogo"))
         {
             Destroy(collision.gameObject);
-            
+            audioS.clip = Sounds[1];
+            audioS.Play();
+
             TomeDano(2);
         }
         

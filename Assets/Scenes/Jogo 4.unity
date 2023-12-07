@@ -734,7 +734,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9f69049cd0fa6ed40b24df56687ec728, type: 3}
@@ -1249,6 +1249,7 @@ MonoBehaviour:
   cooldownDuration: 0.6
   tempoMachado: 1
   Hp: 10
+  Blaze: {fileID: 0}
 --- !u!111 &1565578335
 Animation:
   m_ObjectHideFlags: 0
@@ -1271,7 +1272,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565578328}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dc7cfa7cbd2b9a34ca0e0fc40c2daf57, type: 3}
