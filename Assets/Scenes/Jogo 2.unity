@@ -2399,7 +2399,7 @@ MonoBehaviour:
   forcaDoTiro: 31.29
   cooldownDuration: 1
   tempoMachado: 1
-  Hp: 20
+  Hp: 32
   Blaze: {fileID: 338656829}
   audioS: {fileID: 1565578336}
   Sounds:

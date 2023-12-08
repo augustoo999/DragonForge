@@ -1206,8 +1206,12 @@ PrefabInstance:
       value: -13.8
       objectReference: {fileID: 0}
     - target: {fileID: 1378702534352192770, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -64.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378702534352192770, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.07
+      value: 54.75
       objectReference: {fileID: 0}
     - target: {fileID: 2441692561683713664, guid: 7c18dfc5958e3b94aace81431ed4ddca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2465,7 +2469,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565578328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 532.9, y: 467.5, z: 0}
+  m_LocalPosition: {x: -43.55, y: -16.24, z: 0}
   m_LocalScale: {x: 3.0580454, y: 2.7485883, z: 2.3667}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2492,7 +2496,7 @@ MonoBehaviour:
   forcaDoTiro: 31.29
   cooldownDuration: 1
   tempoMachado: 1
-  Hp: 20
+  Hp: 32
   Blaze: {fileID: 210007570}
   audioS: {fileID: 1565578336}
   Sounds:
