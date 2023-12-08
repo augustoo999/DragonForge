@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Ground
   - Jogador
-  - 
+  - Transitions
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1409815171
+    locked: 0
+  - name: Transition
+    uniqueID: 1163034409
     locked: 0

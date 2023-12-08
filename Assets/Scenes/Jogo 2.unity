@@ -729,7 +729,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU INICIAL
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -793,7 +793,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &330168747
@@ -1410,8 +1410,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ffcbf773b5417094589cb3b9aa3fde60, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
-  m_Pitch: 1
+  m_Volume: 0.05
+  m_Pitch: 0.7
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1569,7 +1569,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: CONTINUAR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &572308258
@@ -1661,7 +1661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547598269244966616, guid: abaf1d98feb421045b6ef13450ca871d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1005.2
+      value: 1005.7
       objectReference: {fileID: 0}
     - target: {fileID: 8547598269244966616, guid: abaf1d98feb421045b6ef13450ca871d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2028,13 +2028,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2372,7 +2372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565578328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 921.37, y: 1003.07, z: 0}
+  m_LocalPosition: {x: 903, y: 1005.2, z: 0}
   m_LocalScale: {x: 3.0580454, y: 2.7485883, z: 2.3667}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2397,7 +2397,7 @@ MonoBehaviour:
   balaProjetil: {fileID: 6246363529049301446, guid: 10fc6d28f897dff42b0b65d0564b42b2, type: 3}
   arma: {fileID: 353953381}
   forcaDoTiro: 31.29
-  cooldownDuration: 0.8
+  cooldownDuration: 1
   tempoMachado: 1
   Hp: 20
   Blaze: {fileID: 338656829}
@@ -2453,7 +2453,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.08
   m_Pitch: 1
   Loop: 0
   Mute: 0

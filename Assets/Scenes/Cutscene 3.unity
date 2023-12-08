@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterImage: {fileID: 2106532753}
   characterSpeech: {fileID: 2134649304}
-  nextScene: Jogo 1
+  nextScene: "Cr\xE9ditos"
   cutsceneText: "Ele est\xE1 aqui me provocando, vou entrar nesse vulc\xE3o e salvar
     minha amada Celeste!!"
   cutsceneDuration: 3
